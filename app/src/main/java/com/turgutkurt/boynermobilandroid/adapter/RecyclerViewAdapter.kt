@@ -27,7 +27,6 @@ class RecyclerViewAdapter(private val newsList: ArrayList<NewsModel>, private va
         holder.itemView.setOnClickListener {
             listener.onItemClick(newsList.get(position))
         }
-        holder.itemView.setBackgroundColor(Color.parseColor(colors[position % 8]))
 
         holder.binding.textName.text = newsList.get(position).name
         holder.binding.textDescription.text = newsList.get(position).description
